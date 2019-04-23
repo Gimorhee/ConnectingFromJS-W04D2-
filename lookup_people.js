@@ -26,6 +26,10 @@ client.connect((err) => {
   }
   findPerson(arg, (err, result) => {
     let count = 1;
+
+    if (err) {
+      return console.error("error!", err);
+    }
     console.log("Searching...");
     console.log(`Found ${result.length} person(s) by the name '${arg}'`);
     result.forEach(person => {

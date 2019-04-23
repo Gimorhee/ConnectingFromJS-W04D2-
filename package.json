@@ -1,0 +1,23 @@
+{
+  "name": "connectingfromjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "^7.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gimorhee/ConnectingFromJS-W04D2-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gimorhee/ConnectingFromJS-W04D2-/issues"
+  },
+  "homepage": "https://github.com/Gimorhee/ConnectingFromJS-W04D2-#readme"
+}

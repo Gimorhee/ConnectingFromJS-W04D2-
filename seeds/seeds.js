@@ -5,9 +5,8 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('milestones').insert([
-        {id: 1, name: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+        {description: 'Won lottery'},
+        {date_achieved: '2 weeks ago.'}
       ]);
     });
 };

@@ -1,5 +1,4 @@
 const arg = process.argv[2];
-const pg = require("pg");
 const settings = require("./settings"); // settings.json
 
 var knex = require('knex')({
@@ -15,7 +14,7 @@ var knex = require('knex')({
 knex.select('*').from('famous_people')
   .where('first_name', arg)
   .orWhere('last_name', arg)
-  .asCallback(function(err, rows) {
+  .asCallback((err, rows) => {
     if (err) return console.error(err);
     console.log(rows);
   });

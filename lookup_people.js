@@ -1,4 +1,4 @@
-const arg = process.argv.slice(2);
+const arg = process.argv[2];
 const pg = require("pg");
 const settings = require("./settings"); // settings.json
 
@@ -12,7 +12,7 @@ const client = new pg.Client({
 });
 
 const findPerson = (name, cb) => {
-  client.query("SELECT * FROM famous_people WHERE first_name = $1::text OR last_name = $1::text", name, (err, result) => {
+  client.query("SELECT * FROM famous_people WHERE first_name = $1::text OR last_name = $1::text", [name], (err, result) => {
     if (err) {
       return console.error("error running query", err);
     }
